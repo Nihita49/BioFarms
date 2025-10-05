@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      crossorigin=""
+      href="https://fonts.gstatic.com/"
+      rel="preconnect"
+    />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Public+Sans:wght@400;500;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#19e619",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>farm owners Dashboard</title>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+
+      <!-- Header -->
+      <header class="flex items-center justify-between">
+        <h1 class="text-4xl font-bold">Farm Owner Dashboard</h1>
+        <button class="bg-primary text-black px-5 py-2.5 font-bold rounded-lg hover:bg-green-400 transition">Logout</button>
+      </header>
+
+      <!-- Worker Table -->
+      <section class="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-gray-50 dark:bg-white/5">
+              <tr>
+                <th class="px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-300">Worker</th>
+                <th class="px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-300">Last Activity</th>
+                <th class="px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-300">Checklist Completion</th>
+                <th class="px-4 py-3 text-sm font-medium text-gray-600 dark:text-gray-300">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+              <tr>
+                <td class="px-4 py-3">Ramesh</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">Checked equipment</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-24 rounded-full bg-gray-200 dark:bg-gray-700">
+                      <div class="h-2 rounded-full bg-primary" style="width: 80%"></div>
+                    </div>
+                    <p>80%</p>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary/80">Active</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Suresh</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">Completed hygiene protocol</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-24 rounded-full bg-gray-200 dark:bg-gray-700">
+                      <div class="h-2 rounded-full bg-primary" style="width: 100%"></div>
+                    </div>
+                    <p>100%</p>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary/80">Active</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Prakash</td>
+                <td class="px-4 py-3 text-gray-500 dark:text-gray-400">Reported animal health</td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-24 rounded-full bg-gray-200 dark:bg-gray-700">
+                      <div class="h-2 rounded-full bg-primary" style="width: 60%"></div>
+                    </div>
+                    <p>60%</p>
+                  </div>
+                </td>
+                <td class="px-4 py-3">
+                  <span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary/80">Active</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Stats Grid -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-6 space-y-2 shadow-sm">
+          <h2 class="text-xl font-semibold">Hygiene Activities</h2>
+          <p class="text-3xl font-bold">95%</p>
+          <p class="text-sm text-gray-500">Last 7 Days <span class="text-green-500 font-medium">+5%</span></p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-6 space-y-2 shadow-sm">
+          <h2 class="text-xl font-semibold">Worker Compliance</h2>
+          <p class="text-3xl font-bold">80%</p>
+          <p class="text-sm text-gray-500">Last 30 Days <span class="text-red-500 font-medium">-10%</span></p>
+        </div>
+      </section>
+
+      <!-- Recommended Solutions (Slider Section) -->
+      <!-- Recommended Solutions (Slider Section) -->
+<section>
+  <h2 class="text-xl font-bold mb-4">Recommended Solutions</h2>
+  <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth">
+    
+    <!-- Product 1 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWyIkITszfsQKpcRZjJWjXc6jMSESQRJy94-PBxawgybsBQfnASC34LFb6Put8xLf8abiyJxISYPqRmylbP70sOvmZH77FRAOwft_awOli01zk-pA5SDeUm70MyP_YbWhatxVIWViIPA0le4KC9d9BZjwfG3g8q-x4bkP83uKfukebQp7C8AERYudVAQNMolsYELx_eSitGIs0PvO98Zaw2UaxWMwCA5SnhLz5En0fSt6Egv6hXrTUr1eK3FvVjvO4PZpx36Mlkrqp');"></div>
+      <div class="p-4">
+        <p class="font-medium">VetPro</p>
+        <p class="text-sm text-gray-500">Advanced veterinary care</p>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_ii-qbapmJPWwdnc3r1HhgAXBUTTe7u81L6KqD97-qFDRZPbHlpqkopFmTXX-QJYodGAf3wFLma0woM-u7S62RHzXbifEtZZ3dY3rbWxpPuxm_bXp31dukWP4p5xsxYlSaPV-WXbuL-VAku1MtAzV2Hc5dakhgemNS7qaF5wGt1wJxsy_1RZmVMgGPLc5Vjd5BxnCzC679jpj6cGRoueYckoi_XSs1neitMH3uYDBnRb7u2vWHnuIUhazQEByynOGzUsrnOtDkS_a');"></div>
+      <div class="p-4">
+        <p class="font-medium">NutriFeed</p>
+        <p class="text-sm text-gray-500">Optimal nutrition for livestock</p>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHcuyYbq1C4xmhUk3rqt1b58LrzEyFCQ7-v1v3fjRSaLO5RzOuwGDx4Dwu-F7uP4rfSw3pMXQVsr8hTI3YJQDW1DyY-IGS_tblTVH5eRVKrX1nC8KuvQap6W5kRFZ_G37rGdHrb_GWaAaWETrkd6aXLnLEiptckvQYyBSkloE-de2hUDlpQ8AyJ6PC3pV-DPy1151qpINQBl23dx-5SUIkw-1B9ziUBwEmqYle-ktZjR1u-_oi1jIIIuQVAbCT4F9ex_eHZKeBlIwp');"></div>
+      <div class="p-4">
+        <p class="font-medium">CleanFarm</p>
+        <p class="text-sm text-gray-500">Effective hygiene solutions</p>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('charlesdeluvio-nfDBmg1K4Uw-unsplash.jpg');"></div>
+      <div class="p-4">
+        <p class="font-medium">SafeWater</p>
+        <p class="text-sm text-gray-500">Clean water for livestock</p>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('fertilizer.jpg');"></div>
+      <div class="p-4">
+        <p class="font-medium">EcoFertil</p>
+        <p class="text-sm text-gray-500">Natural fertilizers for pastures</p>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="flex-shrink-0 w-64 snap-start rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark shadow-sm">
+      <div class="h-40 bg-cover bg-center" style="background-image:url('alex-lvrs-dKMueUuH5CQ-unsplash.jpg');"></div>
+      <div class="p-4">
+        <p class="font-medium">FarmGuard</p>
+        <p class="text-sm text-gray-500">Pest control solutions</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- Notifications -->
+      <section>
+        <h2 class="text-xl font-bold mb-4">Notifications</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary">
+              ⚠️
+            </div>
+            <div>
+              <p class="font-medium">Emergency</p>
+              <p class="text-sm text-gray-500">Urgent: Animal health alert</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-700 shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary">
+              🩺
+            </div>
+            <div>
+              <p class="font-medium">Health Update</p>
+              <p class="text-sm text-gray-500">Routine health check scheduled</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

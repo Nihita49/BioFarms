@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Dashboard - Digital Farm Biosecurity Portal</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#19e619",
+          "background-light": "#f6f8f6",
+          "background-dark": "#112111",
+        },
+        fontFamily: {
+          "display": ["Public Sans"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<style>
+  .checkbox-tick-svg {
+    --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(17,24,17)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+  }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<main class="flex-1 overflow-y-auto p-8">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Worker Dashboard</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 space-y-8">
+
+        <!-- Biosecurity Measures -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Biosecurity Measures</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="group">
+              <div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSCsD97W1d7S6SnWTZggoHmiFs0MlMwIb0P-J5SZRPq1Qg7cQA6ZxJgrN3oq1sA-mltHzTg9aJY2qxBEa3K7rNUr_NTdiFNTN9UDS_OH7C45CmSe-I140CxbDdtYRSV89w_0ulPvkW_hp6pGoDm7KLMTgTzbc_3Xny7Fiuc2Hd4M1CFpq26uNDeAlsTkf410DleXKbMbwGnNjuRqmPgI58i5jWjtG0F88pAeI4JWllPG8TbpdIqDv96SRXSdXmfrh24hZb--OqiWHc");'></div>
+              <p class="text-center mt-2 font-medium text-gray-800 dark:text-gray-200">Handwashing</p>
+            </div>
+            <div class="group">
+              <div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZjeT0NkzZXRhE5zbO54cDi3Xj2vyvyXOkOwdmpEtJcWYUodV9sYdiRAPbP4o0Z7l1RDUIirTmigsweGwnzdTuxvafpsxhi_MJhgdpvL113kzfnTYpX3GwzVP5TYKv5XIET3bdo3OjqLldNIIvZaGNsHyrLS5TyZdcj48V2CdwGkLPZ4m_vGC5QK0pUMMQ8hgkZht0AbbQHf1dtZdzWFs7VmWnZUs13Asb5eey_eF1VyzrIl3wBlCJ7HURLVXiYtX5tn6lOEKb5Kl");'></div>
+              <p class="text-center mt-2 font-medium text-gray-800 dark:text-gray-200">Boot Change</p>
+            </div>
+            <div class="group">
+              <div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNXXrFQdKYjXPX4-3v3vxkuOOHLJudiBQnveyC7CsGOkkIsGpnXflDquZBEiGbdimlJmBZeA1bXfUpR-XRjDsqiq3KwrzAh1hhTlFeU_MUTOXSxIq9IykBS9UmyNUH7qVrvuxJfyYZs-jxwXdlEQB2cnhPwu_jHbX1IxdJ5nDkokwqopsD4jrCpGGzXEtOp17nbxyzzSFI2_pGrSYgQDQ2jQzP3pYVjoMCVI0rM1Unu3Le7fMJQ72xq9C0XELQsCzxTn8MDmiSkKPB");'></div>
+              <p class="text-center mt-2 font-medium text-gray-800 dark:text-gray-200">Equipment Cleaning</p>
+            </div>
+            <div class="group">
+              <div class="w-full aspect-square rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDivAwMGu57cf0J4Dun3xao0o8YpaBefz2y_ejQChX5fM5gF2md1Jysvgj0m4gldbVFVLcpKGfuiIfUY1QAwqmAIrcmthb8mOMvcFLrJPD_XzW3X3WZWDn6yrugO8Lto0OZO393ep4l69NfuLKitJbH3Wj6FCCWDNqJgw4v3bycL09MFslWXhci3XZPGRJRvwcCCYWx7TRwN1HfqavFYkXs6MLmdZAqFWrDn8gY2w2y_Z5TwNO-Z9P45kGgdvGvcROufxIKaNGMdTlL");'></div>
+              <p class="text-center mt-2 font-medium text-gray-800 dark:text-gray-200">Area Disinfection</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Educational Resources -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Educational Resources</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="group">
+              <div class="w-full aspect-video rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDv7mvS6nQZrAVcKp22s2l-kVXSzumOjoalZxhM81VMnpv5bEWC0stJ9JoBn-AWGcLESgH2uEK4vu6-TqvVGK0nNTbJYONZTxyLvpuFgzZuyWMTug62bit9zmqFWXf4hirUAEAAxBYFJQtqxhJLTKLUDG237S35Y04usqRW3WfUr_F4s_bWr6_7AutvPepDC0qcNEWZvr0crC2mL6BbDe4HwO3R2sJ6f7pW6xgmjlqN-5UfEE3YuBWufirrKYw_kgA9SAnmdcCHikWP");'></div>
+              <p class="mt-2 font-medium text-gray-800 dark:text-gray-200">Biosecurity Measures Video</p>
+            </div>
+            <div class="group">
+              <div class="w-full aspect-video rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqsjcHsfo4-RVi7--TD4IrUeOtkXTyO4E8HLueNHwAbxQtitRwUHNaPBtzLPJmNdJ-sOBd6s1Zow95YY00xXYeqO1IHE7MOkyYJuQA-xzeDf31QMbNno_mmzulkQhgq4MSHL8mmpbCursyVLd_ue119_Ew4aHe_b1EQwJiv06aoYJF_hZ7lezGpZVryRP02aOIVJo6g-lb0Ag9k6eqmk_b8E21av6rJ_SlgHR8NjgnIV5xAE2lXSPsbgT8dlwKVcq8mxQ5gb4TiyjG");'></div>
+              <p class="mt-2 font-medium text-gray-800 dark:text-gray-200">Farm Hygiene Guide</p>
+            </div>
+            <div class="group">
+              <div class="w-full aspect-video rounded-lg bg-cover bg-center transition-transform duration-300 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9vacvY8HAhv6eyR2vTPH4rlTW-FcmQQg3ySvcNzZKjVgpb7HZ5fJYgyaudMdMkEBrdb2wt6UygLAlBQ4e7aM-G98UbOVaHX0D3LoN0iNYBNcX55_q9Z-4ubUfcsKd8HnWv0lFik-YUYkw9G__-CdSWP5zdEJUDGuw01uDjYBvWDebTPhRZnipddvUo2Fp7Zy4qGlLO0BfK_sUbzHGiy2a3WcLaBnPZ4ZFzS43MkbSUQAbesPohC1oGiK1h_fIyqXTqufkSWxVlmbk");'></div>
+              <p class="mt-2 font-medium text-gray-800 dark:text-gray-200">Disease Prevention Animation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Task Checklist -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Daily Task Checklist</h2>
+          <div class="space-y-4">
+            <label class="flex items-center gap-x-3 p-4 rounded-lg bg-background-light dark:bg-gray-800/50">
+              <input checked="" class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-transparent focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark checkbox-tick-svg" type="checkbox"/>
+              <span class="text-gray-800 dark:text-gray-200">Check animal health</span>
+            </label>
+            <label class="flex items-center gap-x-3 p-4 rounded-lg bg-background-light dark:bg-gray-800/50">
+              <input class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-transparent focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark checkbox-tick-svg" type="checkbox"/>
+              <span class="text-gray-800 dark:text-gray-200">Clean and disinfect equipment</span>
+            </label>
+            <label class="flex items-center gap-x-3 p-4 rounded-lg bg-background-light dark:bg-gray-800/50">
+              <input class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:bg-primary checked:border-transparent focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark checkbox-tick-svg" type="checkbox"/>
+              <span class="text-gray-800 dark:text-gray-200">Monitor biosecurity measures</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Risk Assessment -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Farm Risk Assessment</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Question Card 1 -->
+            <div class="p-4 bg-background-light dark:bg-gray-800/50 rounded-lg shadow group">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Animal Density</h3>
+              <select class="w-full p-2 rounded border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-800 dark:text-gray-200" data-score="0">
+                <option value="0">Low</option>
+                <option value="1">Medium</option>
+                <option value="2">High</option>
+              </select>
+            </div>
+            <!-- Question Card 2 -->
+            <div class="p-4 bg-background-light dark:bg-gray-800/50 rounded-lg shadow group">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Hygiene Practices</h3>
+              <select class="w-full p-2 rounded border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-800 dark:text-gray-200" data-score="0">
+                <option value="0">Excellent</option>
+                <option value="1">Average</option>
+                <option value="2">Poor</option>
+              </select>
+            </div>
+            <!-- Question Card 3 -->
+            <div class="p-4 bg-background-light dark:bg-gray-800/50 rounded-lg shadow group">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Visitor Control</h3>
+              <select class="w-full p-2 rounded border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-800 dark:text-gray-200" data-score="0">
+                <option value="0">Strict</option>
+                <option value="1">Moderate</option>
+                <option value="2">None</option>
+              </select>
+            </div>
+            <!-- Question Card 4 -->
+            <div class="p-4 bg-background-light dark:bg-gray-800/50 rounded-lg shadow group">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Feed Storage</h3>
+              <select class="w-full p-2 rounded border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-700 text-gray-800 dark:text-gray-200" data-score="0">
+                <option value="0">Secure</option>
+                <option value="1">Moderate</option>
+                <option value="2">Poor</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button onclick="calculateRisk()" class="bg-primary text-gray-900 px-4 py-2 rounded font-bold hover:opacity-90 transition-opacity">Calculate Risk Score</button>
+          </div>
+          <div id="riskResult" class="mt-4 hidden p-4 bg-yellow-100 dark:bg-yellow-900/20 rounded">
+            <p class="text-lg font-semibold">Risk Score: <span id="riskScore">0</span></p>
+            <p class="text-lg font-semibold" id="riskLevel">Risk Level: Low</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Notifications & Quick Contact Column -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Notifications & Alerts</h2>
+          <div class="flex items-center gap-4 p-4 rounded-lg bg-yellow-100/50 dark:bg-yellow-900/20">
+            <div class="flex items-center justify-center rounded-full bg-yellow-400/30 text-yellow-600 dark:text-yellow-400 shrink-0 size-12">
+              <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path></svg>
+            </div>
+            <div>
+              <p class="font-bold text-yellow-800 dark:text-yellow-200">Reminder</p>
+              <p class="text-sm text-yellow-700 dark:text-yellow-300">Scheduled task: Equipment cleaning</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Quick Contact</h2>
+          <button class="flex w-full items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-gray-900 font-bold text-lg hover:opacity-90 transition-opacity">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"></path></svg>
+            <span>Contact Vet</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  function calculateRisk() {
+    const selects = document.querySelectorAll('select');
+    let score = 0;
+    selects.forEach(sel => { score += parseInt(sel.value); });
+    const resultDiv = document.getElementById('riskResult');
+    const scoreSpan = document.getElementById('riskScore');
+    const levelSpan = document.getElementById('riskLevel');
+    scoreSpan.textContent = score;
+    let level = 'Low';
+    if(score >= 6) level = 'High';
+    else if(score >= 3) level = 'Medium';
+    levelSpan.textContent = `Risk Level: ${level}`;
+    resultDiv.classList.remove('hidden');
+  }
+</script>
+</body>
+</html>

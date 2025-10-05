@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Farm Biosecurity Portal</title>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<link as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&display=swap" onload="this.rel='stylesheet'" rel="stylesheet" />
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#19e619",
+        "background-light": "#f6f8f6",
+        "background-dark": "#112111",
+      },
+      fontFamily: {
+        "display": ["Public Sans"],
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px",
+      },
+    },
+  },
+};
+</script>
+
+<style>
+.form-input, .form-select {
+  --tw-ring-color: transparent !important;
+}
+</style>
+</head>
+<header>
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-black/10 dark:border-white/10 px-4 lg:px-8">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold">BioFarms</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://cdn.dribbble.com/users/1162077/screenshots/5344019/working.gif");'></div>
+</div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md space-y-8">
+      <div class="w-full bg-center bg-no-repeat bg-cover rounded-xl min-h-[200px]" style='background-image: url("cymatics-in-U-5qN1L0qHk-unsplash.jpg");'></div>
+
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Welcome to the Biosecurity Portal
+        </h2>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+          Please sign in to your account
+        </p>
+      </div>
+
+      <form id="loginForm" class="mt-8 space-y-6">
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <label for="username" class="sr-only">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required
+              class="form-input appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white rounded-t-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm bg-background-light dark:bg-background-dark"
+              placeholder="Username" />
+          </div>
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+              class="form-input appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm bg-background-light dark:bg-background-dark"
+              placeholder="Password" />
+          </div>
+          <div>
+            <label for="role" class="sr-only">Role</label>
+            <select id="role" name="role" required
+              class="form-select appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-b-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm bg-background-light dark:bg-background-dark">
+              <option value="">Select your role</option>
+              <option value="owner">Farm Owner</option>
+              <option value="worker">Farm Worker</option>
+              <option value="authority">Authority</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-end">
+          <div class="text-sm">
+            <a href="#" class="font-medium text-primary/80 hover:text-primary">Forgot your password?</a>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-black bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+            Sign In
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const role = document.getElementById("role").value;
+
+    // Replace these paths with your actual local or hosted links
+    if (role === "worker") {
+      window.location.href = "worker.html";
+    } else if (role === "owner") {
+      window.location.href = "owner.html";
+    } else if (role === "authority") {
+      window.location.href = "ministry.html";
+    } else {
+      alert("Please select a valid role!");
+    }
+  });
+});
+</script>
+</body>
+</html>

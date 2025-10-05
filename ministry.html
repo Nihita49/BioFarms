@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#19e619",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<title>Stitch Design</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+
+<main class="flex-1 px-4 lg:px-8 py-8">
+<div class="mx-auto max-w-7xl">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Biosecurity Compliance Dashboard</h2>
+<p class="text-black/60 dark:text-white/60">Monitor and analyze biosecurity compliance across multiple farms.</p>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<div>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Mortality Rates</p>
+<p class="text-3xl font-bold">2.5%</p>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-black/60 dark:text-white/60">Last 30 Days</span>
+<span class="font-medium text-red-500">-0.5%</span>
+</div>
+</div>
+<div class="flex-1">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#19e619" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#19e619" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 109 C 18.1538 109 18.1538 21 36.3077 21 C 54.4615 21 54.4615 41 72.6154 41 C 90.7692 41 90.7692 93 108.923 93 C 127.077 93 127.077 33 145.231 33 C 163.385 33 163.385 101 181.538 101 C 199.692 101 199.692 61 217.846 61 C 236 61 236 45 254.154 45 C 272.308 45 272.308 121 290.462 121 C 308.615 121 308.615 149 326.769 149 C 344.923 149 344.923 1 363.077 1 C 381.231 1 381.231 81 399.385 81 C 417.538 81 417.538 129 435.692 129 C 453.846 129 453.846 25 472 25 L 472 150 L 0 150 Z" fill="url(#paint0_linear_1)"></path>
+<path d="M0 109 C 18.1538 109 18.1538 21 36.3077 21 C 54.4615 21 54.4615 41 72.6154 41 C 90.7692 41 90.7692 93 108.923 93 C 127.077 93 127.077 33 145.231 33 C 163.385 33 163.385 101 181.538 101 C 199.692 101 199.692 61 217.846 61 C 236 61 236 45 254.154 45 C 272.308 45 272.308 121 290.462 121 C 308.615 121 308.615 149 326.769 149 C 344.923 149 344.923 1 363.077 1 C 381.231 1 381.231 81 399.385 81 C 417.538 81 417.538 129 435.692 129 C 453.846 129 453.846 25 472 25" stroke="#19e619" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<div>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Disease Trends</p>
+<p class="text-3xl font-bold">12 cases</p>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-black/60 dark:text-white/60">Last 30 Days</span>
+<span class="font-medium text-green-500">+2 cases</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-3 gap-4 items-end">
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-24 bg-primary/20 rounded-t-lg" style="height: 40%"></div>
+<p class="text-xs font-medium text-black/60 dark:text-white/60">Disease A</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-24 bg-primary/20 rounded-t-lg" style="height: 70%"></div>
+<p class="text-xs font-medium text-black/60 dark:text-white/60">Disease B</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-24 bg-primary/20 rounded-t-lg" style="height: 30%"></div>
+<p class="text-xs font-medium text-black/60 dark:text-white/60">Disease C</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<div>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Worker Compliance</p>
+<p class="text-3xl font-bold">85%</p>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-black/60 dark:text-white/60">Current</span>
+<span class="font-medium text-green-500">+5%</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-4 justify-center">
+<div class="flex items-center gap-2">
+<p class="w-16 text-xs font-medium text-black/60 dark:text-white/60">Farm A</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 80%;"></div></div>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-xs font-medium text-black/60 dark:text-white/60">Farm B</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 90%;"></div></div>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-xs font-medium text-black/60 dark:text-white/60">Farm C</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 75%;"></div></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<div>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Vet Activity Logs</p>
+<p class="text-3xl font-bold">20 logs</p>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-black/60 dark:text-white/60">Last 30 Days</span>
+<span class="font-medium text-green-500">+3 logs</span>
+</div>
+</div>
+<div class="flex-1">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#19e619" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#19e619" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 80 C 18.1538 80 18.1538 120 36.3077 120 C 54.4615 120 54.4615 90 72.6154 90 C 90.7692 90 90.7692 40 108.923 40 C 127.077 40 127.077 100 145.231 100 C 163.385 100 163.385 30 181.538 30 C 199.692 30 199.692 80 217.846 80 C 236 80 236 60 254.154 60 C 272.308 60 272.308 110 290.462 110 C 308.615 110 308.615 20 326.769 20 C 344.923 20 344.923 140 363.077 140 C 381.231 140 381.231 50 399.385 50 C 417.538 50 417.538 100 435.692 100 C 453.846 100 453.846 70 472 70 L 472 150 L 0 150 Z" fill="url(#paint0_linear_2)"></path>
+<path d="M0 80 C 18.1538 80 18.1538 120 36.3077 120 C 54.4615 120 54.4615 90 72.6154 90 C 90.7692 90 90.7692 40 108.923 40 C 127.077 40 127.077 100 145.231 100 C 163.385 100 163.385 30 181.538 30 C 199.692 30 199.692 80 217.846 80 C 236 80 236 60 254.154 60 C 272.308 60 272.308 110 290.462 110 C 308.615 110 308.615 20 326.769 20 C 344.923 20 344.923 140 363.077 140 C 381.231 140 381.231 50 399.385 50 C 417.538 50 417.538 100 435.692 100 C 453.846 100 453.846 70 472 70" stroke="#19e619" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="text-2xl font-bold tracking-tight">Farm Comparison</h3>
+</div>
+<div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<h4 class="font-semibold">Compliance Scores</h4>
+<div class="mt-4 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm A</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 85%;"></div></div>
+<p class="text-sm font-semibold">85%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm B</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 92%;"></div></div>
+<p class="text-sm font-semibold">92%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm C</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 78%;"></div></div>
+<p class="text-sm font-semibold">78%</p>
+</div>
+</div>
+</div>
+<div class="rounded-lg bg-white/5 dark:bg-black/5 p-6 border border-black/10 dark:border-white/10">
+<h4 class="font-semibold">Audit Results</h4>
+<div class="mt-4 flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm A</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 95%;"></div></div>
+<p class="text-sm font-semibold">95%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm B</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 88%;"></div></div>
+<p class="text-sm font-semibold">88%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="w-16 text-sm font-medium text-black/60 dark:text-white/60">Farm C</p>
+<div class="w-full h-2 bg-primary/20 rounded-full"><div class="h-full bg-primary rounded-full" style="width: 91%;"></div></div>
+<p class="text-sm font-semibold">91%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end">
+<button class="bg-primary hover:bg-primary/90 text-black font-bold py-2 px-4 rounded-lg transition-colors">Download Report</button>
+</div>
+<div class="mt-8 rounded-lg bg-primary/10 dark:bg-primary/20 p-6 border border-primary/20">
+<h3 class="text-2xl font-bold tracking-tight text-primary">Vet Compliance Impact</h3>
+<p class="mt-2 text-black/80 dark:text-white/80">
+              Veterinary consultations have significantly improved farm health. Farms with regular vet visits show a
+              <strong>20% reduction in mortality rates</strong> and a <strong>15% increase in worker compliance.</strong>
+</p>
+<div class="mt-6">
+<div class="flex items-center gap-8">
+<div class="flex flex-col items-center">
+<p class="text-4xl font-bold text-green-500">-20%</p>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Mortality Rate</p>
+</div>
+<div class="flex flex-col items-center">
+<p class="text-4xl font-bold text-green-500">+15%</p>
+<p class="text-sm font-medium text-black/60 dark:text-white/60">Worker Compliance</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

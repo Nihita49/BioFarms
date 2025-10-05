@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FarmSafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#19e619",
+              "background-light": "#FFFFFF",
+              "background-dark": "#1F2937",
+              "card-light": "#F9FAFB",
+              "card-dark": "#374151",
+              "text-light": "#111827",
+              "text-dark": "#F9FAFB",
+              "subtext-light": "#6B7280",
+              "subtext-dark": "#D1D5DB",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                }
+            },
+            animation: {
+                fadeInUp: 'fadeInUp 1s ease-out forwards',
+                float: 'float 3s ease-in-out infinite',
+            }
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="container mx-auto px-4">
+<header class="flex justify-between items-center py-6">
+<h1 class="text-2xl font-bold">Biofarms</h1>
+<a class="bg-primary text-white font-semibold px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors" href="1.html">Login / Sign Up</a>
+</header>
+<main>
+<section class="relative text-center py-20 animate-fadeInUp overflow-hidden rounded-xl">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-50" 
+       style="background-image: url('frances-gunn-QcBAZ7VREHQ-unsplash.jpg');">
+  </div>
+
+  <!-- Overlay for better text readability -->
+  <div class="absolute inset-0 bg-white/30 dark:bg-black/40"></div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <h2 class="text-5xl font-bold mb-4">Welcome to Biofarms</h2>
+    <p class="text-lg text-subtext-light dark:text-subtext-dark max-w-2xl mx-auto mb-8">
+      A digital platform empowering farmers and supporting the Ministry of Animal Husbandry, Fisheries, and Dairies. Monitor farm biosecurity, track poultry and livestock health, and improve community well-being.
+    </p>
+    <a class="bg-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors" href="#">Explore More</a>
+  </div>
+</section>
+<section class="py-20">
+<h3 class="text-3xl font-bold text-center mb-12">How FarmSafe Supports You</h3>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center flex flex-col items-center">
+<div class="w-48 h-48 mb-6">
+<img alt="Animated illustration of a farm with a shield" class="w-full h-full object-cover rounded-full animate-float" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjcN8Cfho7g9ggM-9WbgWRX1sCEVGQYukhkC3VK4htuFPfvOk1V__AxXC8zL5quQj7YWxBJhQPsimM4LZF-tLctG_xvrEgLqt6ePHBjO4jj3MHVi7Pi5FGOo21otd_FZtxn16WKBkAizp61_N4WSWnzztB-JQMg_-pxnLka-o29j8T-oJ5CTSUPyY9aUPSqMgIuHaxoW9-ljw-hjhmURRYjpWQArEe4aIo844O6H8q6z9wRJ65tNre0MqSodwPLArYeKYJaFem4MM" style="animation-delay: 0.2s;"/>
+</div>
+<h4 class="text-xl font-semibold mb-2">Farm Biosecurity</h4>
+<p class="text-subtext-light dark:text-subtext-dark">Monitor hygiene and disease prevention across your farms effectively.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center flex flex-col items-center">
+<div class="w-48 h-48 mb-6">
+<img alt="Animated illustration of people connecting" class="w-full h-full object-cover rounded-full animate-float" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Vc0sS7ICRxY_FQBB0Ml-hZMjRtuEj1DMngJk4gxaOvcXlxnuOsb6_jOR0mzQFg3532si_VQkN63zZrpk0cBx70kibHzMqrWTo8On3KUY3BjuXdwAmvtelDwkvetp2xXtSbJlZYNmnV2505XOQt7avtfAzaz8TS9Vm7KqPtJi0sXTFHWhbpnbFdlqfF73HPmclW5EAmLb2aWw7Qqp6_MIGif-rLgm6hnGOqmCN5qkT5GBwMV46LoO9dvvLbpX59S1sm50Nb-U0DM" style="animation-delay: 0.4s;"/>
+</div>
+<h4 class="text-xl font-semibold mb-2">Community Support</h4>
+<p class="text-subtext-light dark:text-subtext-dark">Connect farmers, authorities, and experts for better decision-making and guidance.</p>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md text-center flex flex-col items-center">
+<div class="w-48 h-48 mb-6">
+<img alt="Animated illustration of data charts and graphs" class="w-full h-full object-cover rounded-full animate-float" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIl5i2RZoWKbsQpm8zZfXkHLa8UwYcNS68zDAJOU55YpYubrxpM0R4xlyDsIScgYCAY6m0asZ4UltDeq9zvjCcyMuloJ3J5GVYon-NxQy_r-fB9jSEUQ2i6YEp9AaTyU_zrIKtWEsZVkFEDlTF1Q6cjD8KupLWB84r2VkBJH6GTAbpI7bxaanuuJgoPP4ofYXj2zCO4M8yKzEObQDs3d-KEsHU_wNRiRlRZXuRIiQ1mWGOhJTKFcb_P0D2fxzoZF0sEnwnneudSEE" style="animation-delay: 0.6s;"/>
+</div>
+<h4 class="text-xl font-semibold mb-2">Data &amp; Reporting</h4>
+<p class="text-subtext-light dark:text-subtext-dark">Help authorities make data-driven decisions on animal health and farm productivity.</p>
+</div>
+</div>
+</section>
+<section class="bg-primary/20 dark:bg-primary/10 py-20 rounded-xl">
+<div class="container mx-auto px-4 text-center">
+<h3 class="text-3xl font-bold mb-4">Empowering Farmers &amp; Communities</h3>
+<p class="text-lg text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto">
+                        FarmSafe provides educational resources, community support, and tools for farmers to improve livestock health, implement biosecurity measures, and collaborate with peers and authorities. Together, we strengthen the farming ecosystem and support sustainable development.
+                    </p>
+</div>
+</section>
+<section class="text-center py-20">
+<h3 class="text-3xl font-bold mb-4">Ready to Get Started?</h3>
+<p class="text-lg text-subtext-light dark:text-subtext-dark mb-8">Join our platform to monitor your farms, track progress, and receive expert guidance.</p>
+<a class="bg-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors" href="#">Login / Sign Up</a>
+</section>
+</main>
+</div>
+
+</body></html>
